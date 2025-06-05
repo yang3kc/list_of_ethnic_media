@@ -1,6 +1,6 @@
 import pandas as pd
 import sys
-from url_utils import extract_domain, remove_parameters, extract_path
+from url_utils import extract_domain, remove_parameters, extract_path, extract_subdomain
 
 cuny_hispanic_media_list_file = sys.argv[1]
 output_file = sys.argv[-1]
@@ -39,9 +39,13 @@ raw_df["url"] = raw_df.website.apply(remove_parameters)
 raw_df["domain"] = raw_df.url.apply(extract_domain)
 # Extract the path
 raw_df["path"] = raw_df.url.apply(extract_path)
+raw_df["subdomain"] = raw_df.url.apply(extract_subdomain)
 
 # Remove cases where domains is not valid
 raw_df = raw_df[raw_df.domain != ""].copy()
+
+# Remove cases where subdomain is present but not wwww
+raw_df = raw_df[(raw_df["subdomain"] == "www") | (raw_df["subdomain"] == "")].copy()
 
 # Remove duplicates
 raw_df = raw_df.drop_duplicates(subset=["domain", "path"])
@@ -70,7 +74,6 @@ def is_ethnic_media_site(path):
         "about",
         "index.html",
         "index.php",
-        "es",
         "site",
         "newspaper.html",
     }
@@ -107,5 +110,6 @@ columns_to_keep = [
     "media_name",
     "zip_code",
     "dataset",
+    "subdomain",
 ]
 ethnic_media_df[columns_to_keep].to_csv(output_file, index=False)

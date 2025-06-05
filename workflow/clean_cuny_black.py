@@ -1,6 +1,6 @@
 import pandas as pd
 import sys
-from url_utils import extract_domain, remove_parameters, extract_path
+from url_utils import extract_domain, remove_parameters, extract_path, extract_subdomain
 
 cuny_black_media_list_file = sys.argv[1]
 output_file = sys.argv[-1]
@@ -40,15 +40,18 @@ raw_df["url"] = raw_df.website.apply(remove_parameters)
 raw_df["domain"] = raw_df.url.apply(extract_domain)
 # Extract the path
 raw_df["path"] = raw_df.url.apply(extract_path)
+raw_df["subdomain"] = raw_df.url.apply(extract_subdomain)
 
 # Remove cases where domains is not valid
 raw_df = raw_df[raw_df.domain != ""].copy()
+
+# Remove cases where subdomain is present but not wwww
+raw_df = raw_df[(raw_df["subdomain"] == "www") | (raw_df["subdomain"] == "")].copy()
 
 # Remove duplicates
 raw_df = raw_df.drop_duplicates(subset=["domain", "path"])
 print(f"Number of unique domains and paths: {len(raw_df)}")
 
-raw_df.to_csv(output_file, index=False)
 
 # Many local news outlets' websites are hosted as sections of a larger website.
 # Since it's difficult to track those websites, we will mainly focus on the outlets with a top-level domains.
@@ -106,5 +109,6 @@ cols_to_keep = [
     "primary_community_served_city_region",
     "state",
     "dataset",
+    "subdomain",
 ]
 ethnic_media_df[cols_to_keep].to_csv(output_file, index=False)
