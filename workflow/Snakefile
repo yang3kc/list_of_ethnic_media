@@ -1,0 +1,70 @@
+from pathlib import Path
+
+########################################################
+# Data paths
+########################################################
+DATA_ROOT = Path("../data")
+RAW_DATA_ROOT = DATA_ROOT / "raw_data"
+INTERMEDIATE_ROOT = DATA_ROOT / "intermediate_files"
+OUTPUT_ROOT = DATA_ROOT / "output"
+
+########################################################
+# Workflows
+########################################################
+
+########################################################
+# Clean the raw data
+
+NWU_ETHNIC_MEDIA_OUTLETS_FILE = RAW_DATA_ROOT / "nwu_ethnic_media_sites.csv"
+CLEANED_NWU_ETHNIC_MEDIA_OUTLETS_FILE = INTERMEDIATE_ROOT / "nwu_cleaned.csv"
+
+rule clean_nwu:
+    input: NWU_ETHNIC_MEDIA_OUTLETS_FILE
+    output: CLEANED_NWU_ETHNIC_MEDIA_OUTLETS_FILE
+    shell: "uv run clean_nwu.py {input} {output}"
+
+CUNY_AAPI_MEDIA_LIST_FILE = RAW_DATA_ROOT / "cuny_journalism_aapi_media_list_20250605.csv"
+CLEANED_CUNY_AAPI_MEDIA_LIST_FILE = INTERMEDIATE_ROOT / "cuny_aapi_cleaned.csv"
+
+rule clean_cuny_aapi:
+    input: CUNY_AAPI_MEDIA_LIST_FILE
+    output: CLEANED_CUNY_AAPI_MEDIA_LIST_FILE
+    shell: "uv run clean_cuny_aapi.py {input} {output}"
+
+CUNY_BLACK_MEDIA_LIST_FILE = RAW_DATA_ROOT / "cuny_journalism_black_media_list_20250605.csv"
+CLEANED_CUNY_BLACK_MEDIA_LIST_FILE = INTERMEDIATE_ROOT / "cuny_black_cleaned.csv"
+
+rule clean_cuny_black:
+    input: CUNY_BLACK_MEDIA_LIST_FILE
+    output: CLEANED_CUNY_BLACK_MEDIA_LIST_FILE
+    shell: "uv run clean_cuny_black.py {input} {output}"
+
+CUNY_HISPANIC_MEDIA_LIST_FILE = RAW_DATA_ROOT / "cuny_journalism_hispanic_media_list_20250605.csv"
+CLEANED_CUNY_HISPANIC_MEDIA_LIST_FILE = INTERMEDIATE_ROOT / "cuny_hispanic_cleaned.csv"
+
+rule clean_cuny_hispanic:
+    input: CUNY_HISPANIC_MEDIA_LIST_FILE
+    output: CLEANED_CUNY_HISPANIC_MEDIA_LIST_FILE
+    shell: "uv run clean_cuny_hispanic.py {input} {output}"
+
+########################################################
+# Combine the cleaned data
+CONCAT_CLEANED_DATA_FILE = INTERMEDIATE_ROOT / "concat_cleaned.csv"
+
+rule concat_cleaned_data:
+    input:
+        CLEANED_NWU_ETHNIC_MEDIA_OUTLETS_FILE,
+        CLEANED_CUNY_AAPI_MEDIA_LIST_FILE,
+        CLEANED_CUNY_BLACK_MEDIA_LIST_FILE,
+        CLEANED_CUNY_HISPANIC_MEDIA_LIST_FILE,
+    output: CONCAT_CLEANED_DATA_FILE
+    shell: "uv run concat_dfs.py {input} {output}"
+
+########################################################
+# Create the final dataset
+FINAL_DATASET_FILE = OUTPUT_ROOT / "final_dataset.csv"
+
+rule create_final_dataset:
+    input: CONCAT_CLEANED_DATA_FILE
+    output: FINAL_DATASET_FILE
+    shell: "uv run create_final_dataset.py {input} {output}"
