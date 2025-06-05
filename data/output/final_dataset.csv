@@ -136,8 +136,6 @@ thechampionnewspaper.com,Black
 theatlantavoice.com,Black
 atlinq.com,Black
 atlantaleader.com,Black
-cnn.com,Hispanic
-capitalbnews.org,Black
 atlantatribune.com,Black
 telemundoatlanta.com,Hispanic
 elnuevogeorgia.com,Hispanic
@@ -145,7 +143,6 @@ notivisiongeorgia.com,Hispanic
 columbustimes.com,Black
 metrocourieraugusta.com,Black
 kawaiola.news,Asian
-koreatimes.com,Asian
 filamcourier.com,Asian
 telemundoboise.com,Hispanic
 kbwe.org,Hispanic
@@ -153,7 +150,6 @@ kbwe.org,Hispanic
 lanuevasemana.com,Hispanic
 chicagocrusader.com,Black
 chicagodefender.com,Black
-finalcall.com,Black
 muslimjournal.net,Black
 chicagoshimpo.com,Asian
 reflejos.com,Hispanic
@@ -261,7 +257,6 @@ poderlatinousa.com,Hispanic
 elespecialitomk.com,Hispanic
 americanonewspaper.com,Hispanic
 telemundonuevomexico.com,Hispanic
-bard.edu,Hispanic
 eldiariony.com,Hispanic
 hitn.tv,Hispanic
 ourtimepress.com,Black
@@ -276,7 +271,6 @@ nycaribnews.com,Black
 thebronxfreepress.com,Hispanic
 remezcla.com,Hispanic
 impactolatino.com,Hispanic
-chinadaily.com.cn,Asian
 blackstarnews.com,Black
 cnylatinonewspaper.com,Hispanic
 ecuadornews.com.ec,Hispanic
@@ -311,7 +305,6 @@ caro.news,Black
 vocerolatino.com,Hispanic
 blackgirlincle.com,Black
 thecincinnatiherald.com,Black
-thetruthtoledo.com,Black
 buckeyereview.org,Black
 lavanguardia.com,Hispanic
 nuestracomunidad.org,Hispanic
@@ -408,7 +401,6 @@ chineseradioseattle.com,Asian
 larazanw.com,Hispanic
 elsoldeyakima.com,Hispanic
 wisconsinlcnews.com,Hispanic
-themadent.com,Black
 wnov860.com,Black
 telemundowi.com,Hispanic
 milwaukeecourieronline.com,Black
@@ -435,9 +427,7 @@ watan.com,Asian
 allewaaalarabi.com,Asian
 americankahani.com,Asian
 amtvusa.tv,Asian
-angryasianman.com,Asian
 anisatlanta.com,Asian
-captivate.fm,Asian
 apnapunjabmedia.com,Asian
 applehouston.tv,Asian
 arabamerica.com,Asian
@@ -454,8 +444,6 @@ asiatodayaz.com,Asian
 asianamericannewsnetwork.com,Asian
 asianamericana.com,Asian
 asianfortunenews.com,Asian
-wordpress.com,Asian
-amamedia.org,Asian
 asianmedianetwork.com,Asian
 asianmediausa.com,Asian
 asianreporter.com,Asian
@@ -476,7 +464,6 @@ balikbayanmagazine.com,Asian
 balitangnewyork.com,Asian
 banglanewyork.com,Asian
 banglapatrikausa.com,Asian
-beiruttimes.com,Asian
 bigstrawmagazine.com,Asian
 blindian-project.com,Asian
 bolly923fm.com,Asian
@@ -490,7 +477,6 @@ bukharianjewishlink.com,Asian
 bukhariantimes.org,Asian
 burdockmedia.com,Asian
 yonhapkoreannews.com,Asian
-beehiiv.com,Asian
 chalamannewyork.com,Asian
 channeltt.tv,Asian
 charactermedia.com,Asian
@@ -499,6 +485,7 @@ chicagoinarabic.com,Asian
 chikinmelele.com,Asian
 chikkamagazine.com,Asian
 chimetv.co,Asian
+chinadaily.com.cn,Asian
 chinainsight.info,Asian
 chinajournal.news,Asian
 cnd.org,Asian
@@ -522,7 +509,6 @@ danquyen.com,Asian
 densho.org,Asian
 deshus.com,Asian
 deshvidesh.com,Asian
-desitalk.com,Asian
 dingdingtv.com,Asian
 diyatvusa.com,Asian
 dalkora.com,Asian
@@ -630,7 +616,6 @@ am1430.net,Asian
 korea24newsmedia.com,Asian
 koreadailytimes.com,Asian
 heraldk.com,Asian
-koreaportal.com,Asian
 higoodday.com,Asian
 koreatimestx.com,Asian
 wktvusa.com,Asian
@@ -639,7 +624,6 @@ koreanaztimes.com,Asian
 mykbn.com,Asian
 kcjlogos.org,Asian
 chpress.net,Asian
-kjhou.com,Asian
 koreanquarterly.org,Asian
 utahkorean.com,Asian
 koreatowndaily.com,Asian
@@ -762,7 +746,6 @@ rangdongatlanta.com,Asian
 reappropriate.co,Asian
 reclamationmagazine.com,Asian
 redwhiteandbrown.media,Asian
-castos.com,Asian
 ricespicemag.com,Asian
 rockymountainchineseweekly.com,Asian
 sanghamam.com,Asian
@@ -775,7 +758,6 @@ samoanews.com,Asian
 samoaobserver.ws,Asian
 samoanamedia.com,Asian
 san-times.com,Asian
-fc2.com,Asian
 sbtn.tv,Asian
 chineseseattlenews.com,Asian
 seattlen.com,Asian
@@ -792,7 +774,6 @@ saada.org,Asian
 scdaily.com,Asian
 soysource.net,Asian
 lankareporter.com,Asian
-scanews.com,Asian
 slcj.us,Asian
 sunbirdarizona.com,Asian
 taiwaneseamerican.org,Asian
@@ -948,7 +929,6 @@ atlantafi.com,Black
 ognsc.com,Black
 thebayareareview.com,Black
 becauseofthemwecan.com,Black
-simplecast.com,Black
 bellbulletin.com,Black
 bettertospeak.org,Black
 bkreader.com,Black
@@ -977,9 +957,9 @@ blavity.com,Black
 bleumag.com,Black
 blocbyblocknews.com,Black
 bridgedetroit.com,Black
-town.news,Black
 thecaladvocate.com,Black
 callandpost.com,Black
+capitalbnews.org,Black
 caribpress.com,Black
 caribbeanamericanweekly.com,Black
 caribbeanlifenews.com,Black
@@ -1122,12 +1102,10 @@ theaswg.com,Black
 blacklensnews.com,Black
 bowiesun.com,Black
 charlestonchronicle.net,Black
-thecharlottevoice.com,Black
 thechocolatevoice.com,Black
 thechundriashow.com,Black
 theclevelandobserver.com,Black
 columbuspost.com,Black
-homestead.com,Black
 thecommunityvoice.com,Black
 etenlightener.com,Black
 theeducatorsroom.com,Black
@@ -1196,7 +1174,6 @@ gainformer.com,Black
 thecommunitypressfla.org,Black
 orlando-times.com,Black
 tpinsights.com,Black
-franklymedia.com,Black
 latino-news.com,Hispanic
 alabamatv.info,Hispanic
 telemundoalaska.com,Hispanic
@@ -1227,8 +1204,6 @@ noticiasya.com,Hispanic
 elpopularnews.com,Hispanic
 laprensahispananewspaper.com,Hispanic
 excelsiorcalifornia.com,Hispanic
-libsyn.com,Hispanic
-podbean.com,Hispanic
 cocolatv.com,Hispanic
 diaadianews.com,Hispanic
 impulsonews.info,Hispanic
@@ -1237,7 +1212,6 @@ voicesofmontereybay.org,Hispanic
 espn1600am.com,Hispanic
 laprensapopular.com,Hispanic
 latina1023.com,Hispanic
-quepasanoticias.com,Hispanic
 telemundocharlotte.com,Hispanic
 latino4u.net,Hispanic
 elinformador.us,Hispanic
@@ -1248,7 +1222,6 @@ lavozcolorado.com,Hispanic
 elcomerciocolorado.com,Hispanic
 postlatino.com,Hispanic
 tribunaenespanol.com,Hispanic
-espn.com,Hispanic
 ellatinodigital.com,Hispanic
 laprensafl.com,Hispanic
 ellatino.com,Hispanic
@@ -1329,7 +1302,6 @@ iblnews.com,Hispanic
 peruanosnews.com,Hispanic
 tuprensalocal.com,Hispanic
 lagaleriamag.com,Hispanic
-hola.com,Hispanic
 voicelatina.com,Hispanic
 latindispatch.com,Hispanic
 livinamericana.com,Hispanic
@@ -1388,7 +1360,6 @@ indicepr.com,Hispanic
 unicaradio1230.com,Hispanic
 noticiasdeponce.net,Hispanic
 eladoquintimes.com,Hispanic
-simplecast.fm,Hispanic
 caribbeanbusiness.com,Hispanic
 newsismybusiness.com,Hispanic
 puertoricoreport.com,Hispanic
@@ -1416,7 +1387,6 @@ latinovations.com,Hispanic
 efe.com,Hispanic
 spanishjournal.com,Hispanic
 miwisconsin.org,Hispanic
-cnet.com,Hispanic
 latinocalifornia.com,Hispanic
 libreonline.com,Hispanic
 somosestrella.com,Hispanic
@@ -1424,9 +1394,7 @@ telemundo42.com,Hispanic
 somosbaltimorelatino.com,Hispanic
 rumbonews.com,Hispanic
 lunj.net,Hispanic
-hitn.org,Hispanic
 nycsportsnews.net,Hispanic
-democracynow.org,Hispanic
 soyyomag.com,Hispanic
 pab550.com,Hispanic
 sanjuanweeklypr.com,Hispanic
