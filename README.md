@@ -17,16 +17,10 @@ a unified dataset of domains.
 The project uses [uv](https://github.com/astral-sh/uv) for dependency
 management. The locked dependencies are recorded in `uv.lock`.
 
+Use the following command to install the dependencies:
+
 ```bash
-# Install uv (if not already installed)
-pip install uv
-
-# Create and activate a virtual environment
-uv venv .venv
-source .venv/bin/activate
-
-# Install the locked dependencies
-uv pip sync
+uv sync
 ```
 
 ## Running the workflow
@@ -41,4 +35,3 @@ snakemake -s workflow/Snakefile --cores 1
 Each rule invokes the associated script with `uv run` so that the pinned
 dependencies are used. The final dataset will be written to
 `data/output/final_dataset.csv`.
-
