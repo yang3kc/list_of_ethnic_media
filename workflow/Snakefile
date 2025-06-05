@@ -1,0 +1,21 @@
+from pathlib import Path
+
+########################################################
+# Data paths
+########################################################
+DATA_ROOT = Path("../data")
+RAW_DATA_ROOT = DATA_ROOT / "raw_data"
+INTERMEDIATE_ROOT = DATA_ROOT / "intermediate_files"
+OUTPUT_ROOT = DATA_ROOT / "output"
+
+########################################################
+# Workflows
+########################################################
+
+NWU_ETHNIC_MEDIA_OUTLETS_FILE = RAW_DATA_ROOT / "nwu_ethnic_media_sites.csv"
+CLEANED_NWU_ETHNIC_MEDIA_OUTLETS_FILE = INTERMEDIATE_ROOT / "nwu_cleaned.csv"
+
+rule clean_nwu:
+    input: NWU_ETHNIC_MEDIA_OUTLETS_FILE
+    output: CLEANED_NWU_ETHNIC_MEDIA_OUTLETS_FILE
+    shell: "uv run clean_nwu.py {input} {output}"
