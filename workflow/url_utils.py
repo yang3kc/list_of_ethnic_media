@@ -126,3 +126,30 @@ def extract_path(url):
 
     except Exception:
         return ""
+
+
+def extract_subdomain(url):
+    """
+    Extracts the subdomain from a URL using tldextract.
+
+    Parameters:
+        url (str): The input URL.
+
+    Returns:
+        str: The extracted subdomain (e.g., 'www' from www.example.com), or an empty string if no subdomain exists.
+
+    Examples:
+        >>> extract_subdomain("https://www.example.com/path")
+        'www'
+        >>> extract_subdomain("http://blog.example.co.uk/page")
+        'blog'
+        >>> extract_subdomain("https://example.com")
+        ''
+        >>> extract_subdomain("invalid-url")
+        ''
+    """
+    url = url.strip()
+    ext = tldextract.extract(url)
+    if ext.subdomain:
+        return ext.subdomain.lower()
+    return ""
