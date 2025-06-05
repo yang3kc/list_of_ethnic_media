@@ -53,5 +53,6 @@ def clean_community(community: str) -> str:
 
 
 raw_df["target_community"] = raw_df["target_community"].apply(clean_community)
+raw_df["dataset"] = "nwu"
 
 raw_df.to_csv(output_file, index=False)

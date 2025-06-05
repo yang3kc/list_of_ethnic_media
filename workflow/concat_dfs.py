@@ -7,6 +7,7 @@ output_file = sys.argv[-1]
 columns_to_keep = [
     "domain",
     "target_community",
+    "dataset",
 ]
 
 dfs = []

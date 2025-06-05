@@ -91,6 +91,8 @@ ethnic_media_df["target_community"] = "Asian"
 for col in ["language", "primary_format", "primary_scope"]:
     ethnic_media_df[col] = ethnic_media_df[col].str.lower().str.strip()
 
+ethnic_media_df["dataset"] = "cuny_aapi"
+
 cols_to_keep = [
     "media_name",
     "domain",
@@ -100,5 +102,6 @@ cols_to_keep = [
     "language",
     "primary_format",
     "primary_scope",
+    "dataset",
 ]
 ethnic_media_df[cols_to_keep].to_csv(output_file, index=False)

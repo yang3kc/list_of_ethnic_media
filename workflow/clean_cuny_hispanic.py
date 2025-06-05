@@ -91,7 +91,7 @@ print(f"Number of ethnic media sites after removing duplicates: {len(ethnic_medi
 
 # Add target_community
 ethnic_media_df["target_community"] = "Hispanic"
-
+ethnic_media_df["dataset"] = "cuny_hispanic"
 # Standardize some columns
 for col in ["primary_format", "language"]:
     ethnic_media_df[col] = ethnic_media_df[col].str.lower().str.strip()
@@ -106,5 +106,6 @@ columns_to_keep = [
     "language",
     "media_name",
     "zip_code",
+    "dataset",
 ]
 ethnic_media_df[columns_to_keep].to_csv(output_file, index=False)
