@@ -27,3 +27,11 @@ rule clean_cuny_aapi:
     input: CUNY_AAPI_MEDIA_LIST_FILE
     output: CLEANED_CUNY_AAPI_MEDIA_LIST_FILE
     shell: "uv run clean_cuny_aapi.py {input} {output}"
+
+CUNY_BLACK_MEDIA_LIST_FILE = RAW_DATA_ROOT / "cuny_journalism_black_media_list_20250605.csv"
+CLEANED_CUNY_BLACK_MEDIA_LIST_FILE = INTERMEDIATE_ROOT / "cuny_black_cleaned.csv"
+
+rule clean_cuny_black:
+    input: CUNY_BLACK_MEDIA_LIST_FILE
+    output: CLEANED_CUNY_BLACK_MEDIA_LIST_FILE
+    shell: "uv run clean_cuny_black.py {input} {output}"
