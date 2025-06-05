@@ -62,3 +62,9 @@ rule concat_cleaned_data:
 
 ########################################################
 # Create the final dataset
+FINAL_DATASET_FILE = OUTPUT_ROOT / "final_dataset.csv"
+
+rule create_final_dataset:
+    input: CONCAT_CLEANED_DATA_FILE
+    output: FINAL_DATASET_FILE
+    shell: "uv run create_final_dataset.py {input} {output}"
